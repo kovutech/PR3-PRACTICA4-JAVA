@@ -9,11 +9,11 @@ public class Ordenar1Vector implements OrdenarVector {
     public void ordena(int[] vec, DatosEstadisticos de) {
         int[] vecs = new int[vec.length];
         int n = vec.length;
-        for (int i = 1; i <= n; i++) {
-            int menor = vec[1];
-            int pos = 1;
-            for (int j = 1; j <= n; j++) {
-                if (menor < vec[j]) {
+        for (int i = 0; i < n; i++) {
+            int menor = vec[0];
+            int pos = 0;
+            for (int j = 1; j < n; j++) {
+                if (menor > vec[j]) {
                     menor = vec[j];
                     pos = j;
                 }

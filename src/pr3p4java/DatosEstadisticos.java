@@ -2,7 +2,7 @@ package pr3p4java;
 
 public class DatosEstadisticos {
 
-    double tiempo;
+    private double tiempo;
 
     public DatosEstadisticos() {
         tiempo = 0;
