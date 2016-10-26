@@ -6,12 +6,15 @@ public class Ordenar1Vector implements OrdenarVector {
         return "Selección lineal";
     }
 
-    public void ordena(int[] vec, DatosEstadisticos de) {
-        int[] vecs = new int[vec.length];
+    public void ordena(int[] vec, int[] vecs, DatosEstadisticos de) {
+        double tiempo = System.currentTimeMillis();
         int n = vec.length;
+        int menor;
+        int pos;
+
         for (int i = 0; i < n; i++) {
-            int menor = vec[0];
-            int pos = 0;
+            menor = vec[0];
+            pos = 0;
             for (int j = 1; j < n; j++) {
                 if (menor > vec[j]) {
                     menor = vec[j];
@@ -21,5 +24,7 @@ public class Ordenar1Vector implements OrdenarVector {
             vecs[i] = menor;
             vec[pos] = Integer.MAX_VALUE;
         }
+        //Tiempo calculado en segundos.
+        de.estableceTiempo((System.currentTimeMillis() - tiempo) / 1000);
     }
 }

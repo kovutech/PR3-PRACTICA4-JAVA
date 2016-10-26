@@ -21,7 +21,8 @@ public class CompruebaCaso {
                 }
             }
             if (faltan == 0) {
-                return; /* Ordenación correcta */
+                return;
+                /* Ordenación correcta */
             }
         } else {
             System.out.print("compruebaVector: En un vector de " + n + " elementos ");
@@ -35,9 +36,11 @@ public class CompruebaCaso {
             }
             for (i = 0; i < n; i++) {
                 if ((vector[i] > 0) && (vector[i] <= n)) {
-                    aux[vector[i] - 1] = 1; /* vec[i] está */
+                    aux[vector[i] - 1] = 1;
+                    /* vec[i] está */
                 } else {
-                    sobran++;  /* vec[i] tiene un valor fuera de rango */
+                    sobran++;
+                    /* vec[i] tiene un valor fuera de rango */
                 }
             }
             for (i = 0; i < n; i++) /* cuenta los no encontrados */ {

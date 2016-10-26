@@ -5,7 +5,7 @@ public class DatosEstadisticos {
     private double tiempo;
 
     public DatosEstadisticos() {
-        tiempo = 0;
+        tiempo = 0.0;
     }
 
     public void añadeTiempo(double time) {
